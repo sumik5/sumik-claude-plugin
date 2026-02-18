@@ -485,6 +485,17 @@ find . -name "*.temp" -delete
 - 環境変数と.serenaをコピー
 - Git書き込み操作は禁止
 
+### ライブラリ調査・情報検索（🔴 実装前必須）
+
+**新規機能の実装前に必ず実施:**
+- **ライブラリ調査**: `researching-libraries`スキル - 既存ライブラリを調査して車輪の再発明を防止
+- **技術情報検索**: `searching-with-exa`スキル - Exa MCPによるWeb検索（WebSearchより優先）
+
+**調査が必要なタイミング:**
+- 新規ライブラリ・パッケージの導入判断時
+- 実装パターン・ベストプラクティスの確認時
+- 公式ドキュメント・APIリファレンスの参照時
+
 ### 品質基準
 
 **詳細は関連スキルを参照してください:**
@@ -521,6 +532,8 @@ find . -name "*.temp" -delete
 
 詳細については、以下のスキルを参照してください：
 
+- **researching-libraries** - 🔴 新規ライブラリ導入前の調査（車輪の再発明禁止）
+- **searching-with-exa** - 🔴 Web検索の第一選択（Exa MCP・WebSearchより優先）
 - **managing-git-worktrees** - Worktree管理の詳細
 - **writing-clean-code** - SOLID原則・コード品質基準
 - **enforcing-type-safety** - 型安全性の原則

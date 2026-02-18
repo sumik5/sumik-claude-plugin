@@ -146,6 +146,8 @@ architect: docs/design/**
 ## 関連スキル
 
 - `implementing-as-tachikoma` - タチコマAgent運用ガイド
+- `researching-libraries` - 🔴 新規ライブラリ導入前の調査（車輪の再発明禁止・planner/implementer両方で参照）
+- `searching-with-exa` - 🔴 Web検索の第一選択（Exa MCP・WebSearchより優先・planner/implementer両方で参照）
 - `using-serena` - トークン効率化開発
 - `developing-nextjs` - Next.js/React開発（フロントエンドメンバー向け）
 - `developing-fullstack-javascript` - NestJS/Expressバックエンド開発

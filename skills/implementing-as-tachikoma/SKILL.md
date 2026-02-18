@@ -72,6 +72,10 @@ worktreeへの移動とセットアップ
 ```
 タスク内容の理解
     ↓
+ライブラリ調査（新規機能・外部依存追加時は必須）
+    ├─ researching-libraries スキル: 既存ライブラリの調査・比較
+    └─ searching-with-exa スキル: 技術情報・実装パターン検索（WebSearchより優先）
+    ↓
 serena MCPでコードベース分析
     ↓
 実装（コード・テスト・ドキュメント）
@@ -145,6 +149,8 @@ Developer Agentは並列実行時に4つの専門性を持ちます：
 
 ## 関連スキル
 
+- **researching-libraries**: 🔴 新規ライブラリ導入前の調査（車輪の再発明禁止）
+- **searching-with-exa**: 🔴 Web検索の第一選択（Exa MCP・WebSearchより優先）
 - **managing-git-worktrees**: Worktree作業の詳細
 - **using-serena**: serena MCPの詳細使用法
 - **securing-code**: CodeGuard実行の詳細

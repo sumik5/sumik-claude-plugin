@@ -34,7 +34,7 @@ planner タチコマの起動:
 ```json
 {
   "description": "計画策定",
-  "prompt": "## タスク: 実装計画の策定\n\n**ユーザー要求:** {ユーザーの要求をそのまま記載}\n\n以下を実行してください:\n1. コードベースを分析し、変更対象ファイル・影響範囲を特定\n2. TEAM-PATTERNS.md を参照し、最適なチーム編成パターンを選択\n3. タスク分解（1メンバーあたり5-6タスク目標）\n4. ファイル所有権パターンを定義（同一ファイル同時書込禁止）\n5. docs/plan-{feature-name}.md を PLAN-TEMPLATE.md の形式で作成\n\n参照スキル: orchestrating-teams（references/TEAM-PATTERNS.md, references/PLAN-TEMPLATE.md）\n\n禁止事項:\n- 実装コードの変更（計画策定のみ）\n- jj書込操作",
+  "prompt": "## タスク: 実装計画の策定\n\n**ユーザー要求:** {ユーザーの要求をそのまま記載}\n\n以下を実行してください:\n1. コードベースを分析し、変更対象ファイル・影響範囲を特定\n2. **既存ライブラリ調査（researching-libraries スキル参照）**: 新規機能に使えるライブラリがないか調査。車輪の再発明禁止\n3. **技術情報検索（searching-with-exa スキル参照）**: 実装パターン・ベストプラクティスをExa MCPで検索（WebSearchより優先）\n4. TEAM-PATTERNS.md を参照し、最適なチーム編成パターンを選択\n5. タスク分解（1メンバーあたり5-6タスク目標）\n6. ファイル所有権パターンを定義（同一ファイル同時書込禁止）\n7. docs/plan-{feature-name}.md を PLAN-TEMPLATE.md の形式で作成（使用ライブラリ・技術選定結果を含める）\n\n参照スキル: orchestrating-teams, researching-libraries, searching-with-exa\n\n禁止事項:\n- 実装コードの変更（計画策定のみ）\n- jj書込操作",
   "subagent_type": "sumik:タチコマ",
   "model": "opus",
   "team_name": "user-management",
@@ -187,6 +187,10 @@ AskUserQuestion(
 **ファイル所有権:** {file_ownership_pattern}
 **参照スキル:** {relevant_skills}
 **依存関係:** {blocking_tasks}
+
+### 🔴 実装前の必須チェック
+- **ライブラリ調査**: 新規機能・外部依存追加時は `researching-libraries` スキルで既存ライブラリを調査（車輪の再発明禁止）
+- **技術情報検索**: 実装パターン・最新情報は `searching-with-exa` スキルでExa MCP検索を第一選択（WebSearchはフォールバック）
 
 具体的な実装指示:
 - [詳細な指示1]
